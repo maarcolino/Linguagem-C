@@ -117,3 +117,63 @@ int main() {
     return 0;
 }
 ```
+
+#### While1.c
+
+```c
+#include <stdio.h>
+
+int main(){
+
+    int i = 0;
+    while( i <= 13 ){
+        printf("%d\n",i);
+        i++;
+    }
+    return 0;
+}
+```
+
+#### while_bissexto.c
+
+```c
+#include <stdio.h>
+
+int main(){
+    int ano = 1950;
+    int qtd = 0;
+
+    while ( ano <= 2024){
+        if( ano % 4 == 0){
+            printf("o ano %d é bissexto\n" ,ano);
+            qtd++;
+        }
+        ano++;
+    }
+    printf("Temos %d anos bissextos\n" ,qtd);
+    return 0;
+}
+```
+
+#### while_dec_bin.c
+
+```c
+#include <stdio.h>
+
+int main(){
+
+    int dec = 24;
+    int resto = 0;
+    int pos = 10;
+    int rs = 1;
+    while( dec > 0){
+        resto = dec % 2;
+        dec = dec / 2;
+        rs = rs + pos * resto;
+        pos = pos * 10;
+    }
+    printf("%d\n",rs);
+    return 0;
+}
+
+```
